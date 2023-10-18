@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 
 class HomePage extends StatefulWidget {
+  static var path = '/home_page';
   const HomePage({super.key});
 
   @override
@@ -16,10 +16,10 @@ class _HomePageState extends State<HomePage> {
   void initState() {
     super.initState();
 
-    const url = 'https://youtu.be/a9v2OBcAYQk';
+    const url1 = 'https://youtu.be/a9v2OBcAYQk';
 
     controller = YoutubePlayerController(
-        initialVideoId: YoutubePlayer.convertUrlToId(url)!,
+        initialVideoId: YoutubePlayer.convertUrlToId(url1)!,
         flags: const YoutubePlayerFlags(
           mute: false,
           loop: false,
@@ -98,7 +98,7 @@ class _HomePageState extends State<HomePage> {
                             Expanded(
                               child: Container(
                                 decoration: BoxDecoration(
-                                  color: Color(0xFFefdcbb),
+                                  color: const Color(0xFFefdcbb),
                                   borderRadius: BorderRadius.circular(20),
                                 ),
                                 height: 200,
@@ -123,13 +123,13 @@ class _HomePageState extends State<HomePage> {
                                 ),
                               ),
                             ),
-                            SizedBox(
+                            const SizedBox(
                               width: 10,
                             ),
                             Expanded(
                               child: Container(
                                 decoration: BoxDecoration(
-                                  color: Color(0xFFefdcbb),
+                                  color: const Color(0xFFefdcbb),
                                   borderRadius: BorderRadius.circular(20),
                                 ),
                                 height: 200,
@@ -165,7 +165,7 @@ class _HomePageState extends State<HomePage> {
                             Expanded(
                               child: Container(
                                 decoration: BoxDecoration(
-                                  color: Color(0xFFefdcbb),
+                                  color: const Color(0xFFefdcbb),
                                   borderRadius: BorderRadius.circular(20),
                                 ),
                                 height: 200,
@@ -193,13 +193,13 @@ class _HomePageState extends State<HomePage> {
                                 ),
                               ),
                             ),
-                            SizedBox(
+                            const SizedBox(
                               width: 10,
                             ),
                             Expanded(
                               child: Container(
                                 decoration: BoxDecoration(
-                                  color: Color(0xFFefdcbb),
+                                  color: const Color(0xFFefdcbb),
                                   borderRadius: BorderRadius.circular(20),
                                 ),
                                 height: 200,
@@ -239,23 +239,25 @@ class _HomePageState extends State<HomePage> {
                         fontWeight: FontWeight.w500,
                         color: Color(0xFFb68c3a),
                       )),
-                      const SizedBox(height: 10,),
+                  const SizedBox(
+                    height: 10,
+                  ),
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 10.0),
                     child: Container(
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(20),
-                        color: Color(0xFFefdcbb),
+                        color: const Color(0xFFefdcbb),
                       ),
                       child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.center,
+                        //crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
                           Padding(
                             padding: const EdgeInsets.all(8.0),
                             child: Row(
                               children: [
                                 Image.asset(
-                                  'assets/yutuqlar1.jpg',
+                                  'assets/natijalar1.png',
                                   width: 160,
                                   height: 80,
                                 ),
@@ -270,11 +272,12 @@ class _HomePageState extends State<HomePage> {
                               ],
                             ),
                           ),
-                          SizedBox(
+                          const SizedBox(
                             height: 10,
                           ),
                           Padding(
-                            padding: const EdgeInsets.only(left:20.0, bottom: 10),
+                            padding:
+                                const EdgeInsets.only(left: 20.0, bottom: 10),
                             child: Row(
                               children: [
                                 const Text(
@@ -284,21 +287,20 @@ class _HomePageState extends State<HomePage> {
                                       fontWeight: FontWeight.w500,
                                       color: Color(0xFFb68c3a),
                                     )),
-                                    Image.asset(
-                                  'assets/yutuqlar2.jpg',
+                                Image.asset(
+                                  'assets/natijalar2.png',
                                   width: 160,
                                   height: 80,
                                 ),
-                                //Image.asset('assets/yutuqlar2.jpg',  width: 160,height: 80),
                               ],
                             ),
                           ),
-                           Padding(
+                          Padding(
                             padding: const EdgeInsets.all(8.0),
                             child: Row(
                               children: [
                                 Image.asset(
-                                  'assets/yutuqlar3.jpg',
+                                  'assets/natijalar3.png',
                                   width: 160,
                                   height: 80,
                                 ),
@@ -309,15 +311,15 @@ class _HomePageState extends State<HomePage> {
                                       fontWeight: FontWeight.w500,
                                       color: Color(0xFFb68c3a),
                                     )),
-                                //Image.asset('assets/yutuqlar2.jpg',  width: 160,height: 80),
                               ],
                             ),
                           ),
-                          SizedBox(
+                          const SizedBox(
                             height: 10,
                           ),
                           Padding(
-                            padding: const EdgeInsets.only(left:20.0, bottom: 10),
+                            padding:
+                                const EdgeInsets.only(left: 20.0, bottom: 10),
                             child: Row(
                               children: [
                                 const Text(
@@ -327,12 +329,11 @@ class _HomePageState extends State<HomePage> {
                                       fontWeight: FontWeight.w500,
                                       color: Color(0xFFb68c3a),
                                     )),
-                                    Image.asset(
-                                  'assets/yutuqlar4.jpg',
+                                Image.asset(
+                                  'assets/natijalar4.png',
                                   width: 160,
                                   height: 80,
                                 ),
-                                //Image.asset('assets/yutuqlar2.jpg',  width: 160,height: 80),
                               ],
                             ),
                           )
@@ -380,7 +381,7 @@ class _HomePageState extends State<HomePage> {
                             padding: const EdgeInsets.symmetric(vertical: 10.0),
                             child: Row(
                               children: [
-                                SizedBox(
+                                const SizedBox(
                                   width: 5,
                                 ),
                                 Expanded(
@@ -392,10 +393,10 @@ class _HomePageState extends State<HomePage> {
                                           height: 30,
                                           width: 30,
                                         ),
-                                        SizedBox(
+                                        const SizedBox(
                                           width: 5,
                                         ),
-                                        Text('Telegram',
+                                        const Text('Telegram',
                                             style: TextStyle(
                                               color: Color(0xFFb68c3a),
                                             ))
@@ -407,7 +408,7 @@ class _HomePageState extends State<HomePage> {
                                     },
                                   ),
                                 ),
-                                SizedBox(
+                                const SizedBox(
                                   width: 10,
                                 ),
                                 Expanded(
@@ -419,10 +420,10 @@ class _HomePageState extends State<HomePage> {
                                           height: 30,
                                           width: 30,
                                         ),
-                                        SizedBox(
+                                        const SizedBox(
                                           width: 5,
                                         ),
-                                        Text('Instagram',
+                                        const Text('Instagram',
                                             style: TextStyle(
                                               color: Color(0xFFb68c3a),
                                             ))
@@ -430,11 +431,11 @@ class _HomePageState extends State<HomePage> {
                                     ),
                                     onPressed: () {
                                       _launchURL(
-                                          'https://www.instagram.com/28_maktab_olmazor/');
+                                          'https://www.instagram.com');
                                     },
                                   ),
                                 ),
-                                SizedBox(
+                                const SizedBox(
                                   width: 5,
                                 ),
                               ],
@@ -444,7 +445,7 @@ class _HomePageState extends State<HomePage> {
                             padding: const EdgeInsets.only(bottom: 10.0),
                             child: Row(
                               children: [
-                                SizedBox(
+                                const SizedBox(
                                   width: 5,
                                 ),
                                 Expanded(
@@ -456,10 +457,10 @@ class _HomePageState extends State<HomePage> {
                                           height: 30,
                                           width: 30,
                                         ),
-                                        SizedBox(
+                                        const SizedBox(
                                           width: 5,
                                         ),
-                                        Text('Facebook',
+                                        const Text('Facebook',
                                             style: TextStyle(
                                               color: Color(0xFFb68c3a),
                                             ))
@@ -471,7 +472,7 @@ class _HomePageState extends State<HomePage> {
                                     },
                                   ),
                                 ),
-                                SizedBox(
+                                const SizedBox(
                                   width: 10,
                                 ),
                                 Expanded(
@@ -483,10 +484,10 @@ class _HomePageState extends State<HomePage> {
                                           height: 30,
                                           width: 30,
                                         ),
-                                        SizedBox(
+                                        const SizedBox(
                                           width: 5,
                                         ),
-                                        Text('Email',
+                                        const Text('Email',
                                             style: TextStyle(
                                               color: Color(0xFFb68c3a),
                                             ))
@@ -497,7 +498,7 @@ class _HomePageState extends State<HomePage> {
                                     },
                                   ),
                                 ),
-                                SizedBox(
+                                const SizedBox(
                                   width: 5,
                                 ),
                               ],
