@@ -430,8 +430,7 @@ class _HomePageState extends State<HomePage> {
                                       ],
                                     ),
                                     onPressed: () {
-                                      _launchURL(
-                                          'https://www.instagram.com');
+                                      _launchURL('https://www.instagram.com');
                                     },
                                   ),
                                 ),
@@ -510,6 +509,19 @@ class _HomePageState extends State<HomePage> {
                   ),
                 ]),
               ),
+            ),
+            bottomNavigationBar: BottomNavigationBar(
+              fixedColor: const Color(0xFFb68c3a),
+              items: const <BottomNavigationBarItem>[
+                BottomNavigationBarItem(
+                  icon: Icon(Icons.home),
+                  label: 'Asosiy',
+                ),
+                BottomNavigationBarItem(
+                  icon: Icon(Icons.school),
+                  label: 'O\'qish',
+                ),
+              ],
             ),
           );
         });
